@@ -2,6 +2,7 @@
 - Finalize human RNA-Seq data 
 - Finalize bacterial RNA-Seq data (done)
 - Run READemption for bacterial data (subsampled and raw data)
+   - Ranging from ~24M to 14 Million reads, Majority are ~18M
 - All the requirement
    - Annaconda
    - ubuntu
