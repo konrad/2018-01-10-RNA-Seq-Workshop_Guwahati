@@ -1,4 +1,4 @@
-- write a generalized script for downloading the data (ongoing)
+- Write a generalized script for downloading the data (ongoing)
 - Finalize human RNA-Seq data 
 - Finalize bacterial RNA-Seq data (done)
 - Run READemption for bacterial data (subsampled and raw data)
