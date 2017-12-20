@@ -20,12 +20,14 @@
 - For Day-1 example datasets 
     - bam file
     - gtf/gff3 file
-    - R files
+    - R files (MA plots. PCA plots, Volcano plots)
+    - Pathway analysis?
     - Bed files
     - wiggle files
 
 -  trimming in READemption
 - editor to be used
 - Check Kalisto mapper
+-
 
  
