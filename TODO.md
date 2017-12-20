@@ -20,7 +20,7 @@
 - For Day-1 example datasets 
     - bam file
     - gtf/gff3 file
-    - R files (MA plots. PCA plots, Volcano plots)
+    - R files (MA plots, PCA plots, Volcano plots)
     - Pathway analysis?
     - Bed files
     - wiggle files
