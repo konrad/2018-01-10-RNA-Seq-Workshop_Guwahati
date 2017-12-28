@@ -16,7 +16,7 @@ Please install the desktop version of the GNU/Linux distribution
 
 Tuturial:
 - [Tutorial](https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop)
-- [Further installation guides](https://help.ubuntu.com/community/Installation
+- [Further installation guides](https://help.ubuntu.com/community/Installation)
 - https://help.ubuntu.com/community/WindowsDualBoot - in case you want Windows and Ubuntu installed on the same machine
 
 ### Anaconda
@@ -33,7 +33,7 @@ $  wget https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
 ### Anaconda packages
 
 ```
-conda install -c bioconda fastqc segemehl sra-tools star samtools kallisto
+conda install -c bioconda bwa fastx-toolki fastqc segemehl sra-tools star samtools kallisto
 ```
 
 ## Data sets
