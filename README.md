@@ -32,6 +32,10 @@ $  wget https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
 
 ### Anaconda packages
 
+```
+conda install -c bioconda fastqc segemehl sra-tools star samtools kallisto
+```
+
 ## Data sets
 
 ### Bacterial data set
