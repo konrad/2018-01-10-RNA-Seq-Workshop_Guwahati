@@ -11,7 +11,9 @@ Please install the desktop version of the GNU/Linux distribution
 Tuturials:
 - [Tutorial](https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop)
 - [Further installation guides](https://help.ubuntu.com/community/Installation)
-- [https://help.ubuntu.com/community/WindowsDualBoot](Instruction for a dual boot installation) in case you want Windows and Ubuntu installed on the same machine
+- [Instruction for a dual boot
+  installation](https://help.ubuntu.com/community/WindowsDualBoot) in
+  case you want Windows and Ubuntu installed on the same machine
 
 After the installation and the first log-in you migh be asked to
 update the system. Please do so. As we will need the terminal
