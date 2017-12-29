@@ -1,11 +1,12 @@
 # RNA-Seq Workshop in Guwahati (2018-01-10 - 2018-01-13)
 
 This is the material collection for the RNA-Seq Workshop that will
-take place Guwahati, India, at 10th to 13th January, 2018.
+take place in Guwahati, India, from the 10th to the 13th January,
+2018.
 
 ## Learning aim
 
-The workshop will teach the following content: 
+The workshop intends to teach the following skills:
 
 - Basic Unis shell skills and the ability to write simple shell
   scripts
