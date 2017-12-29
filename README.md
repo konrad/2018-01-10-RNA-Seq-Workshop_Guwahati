@@ -4,7 +4,7 @@ This is the material collection for the RNA-Seq Workshop that will
 take place in Guwahati, India, from the 10th to the 13th January,
 2018.
 
-## Learning aim
+## Learning aims
 
 The workshop intends to teach the following skills:
 
