@@ -28,7 +28,7 @@ terminal icon in the bar to make it faster accessible.
 
 ### Anaconda
 
-We will use (Anaconda)[https://www.anaconda.com] to install further
+We will use [Anaconda](https://www.anaconda.com) to install further
 tools. 
 
 Open a terminal and download the installer script:
