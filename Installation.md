@@ -3,6 +3,12 @@
 In order to participate in the workshop you have to install Ubuntu
 GNU/Linux as well as Anaconda and serveral tools.
 
+### Hardware requirements
+
+- x64 processor
+- 8 Gb RAM
+- 20 Gb disk space
+
 ### Install Ubuntu
 
 Please install the desktop version of the GNU/Linux distribution
