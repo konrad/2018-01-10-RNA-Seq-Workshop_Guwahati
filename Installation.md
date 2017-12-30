@@ -15,7 +15,7 @@ Please install the desktop version of the GNU/Linux
 distribution [Ubuntu](https://www.ubuntu.com) 16.10 or 17.10. For this
 visit the [download page](https://www.ubuntu.com/download/desktop).
 
-Tuturials:
+Tutorials:
 - [Tutorial](https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop)
 - [Further installation guides](https://help.ubuntu.com/community/Installation)
 - [Instruction for a dual boot
