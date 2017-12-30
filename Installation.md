@@ -7,7 +7,7 @@ GNU/Linux as well as Anaconda and serveral tools.
 
 - x64 processor
 - 8 Gb RAM
-- 20 Gb disk space
+- 40 Gb disk space
 
 ### Install Ubuntu
 
@@ -46,21 +46,28 @@ In the code blocks below the dollar sign (`$`) indicates the command
 line and must not be copied. Only copy and paste the text after it
 into the terminal.
 
-Open a terminal and download the installer script:
+Open a terminal and write
 
 ```
 $  wget https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
 ```
 
-Run the installer script in the terminal - this might take a moment
-depending on the speed of your internet connection. During the
-installation process you will be asked several questions. Instead of
-`your_username` the username you have chosen before during the
-installation of Ububntu will be displayed.
+and **press Enter** to download the installer script.
+
+Now you need to run the installer script in the terminal - this might
+take a moment depending on the speed of your internet
+connection. During the installation process you will be asked several
+questions. Instead of `your_username` the username you have chosen
+before during the installation of Ububntu will be displayed. Write 
 
 ```
 $ bash Anaconda3-5.0.1-Linux-x86_64.sh
+ ```
+
+and **press Enter**. The installer will greet you.
+
  
+``` 
 Welcome to Anaconda3 5.0.1
  
 In order to continue the installation process, please review the license
@@ -160,7 +167,19 @@ and start the installation again.
 
 ### Anaconda packages
 
+Now we need to install some tools. Open a terminal and enter
+
 ```
-conda install -c bioconda bwa fastx-toolki fastqc segemehl sra-tools star samtools kallisto
+$ conda install -c bioconda bwa fastx_toolkit fastqc segemehl sra-tools star samtools kallisto
 ```
 
+**Press Enter**
+
+Conda will present you a list of packages that will be install, up-
+and downgraded.
+
+```
+Proceed ([y]/n)?
+```
+
+**Type y** and **press Enter**
