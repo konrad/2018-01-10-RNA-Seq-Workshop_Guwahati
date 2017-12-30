@@ -41,7 +41,7 @@ will learn how to use the Unix shell properly.
 We will use [Anaconda](https://www.anaconda.com) to install further
 tools. 
 
-In the code blocks below the dollar sign (`$`) indicate the command
+In the code blocks below the dollar sign (`$`) indicates the command
 line and must not be copied. Only copy and paste the text after it
 into the terminal.
 
@@ -52,9 +52,10 @@ $  wget https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
 ```
 
 Run the installer script in the terminal - this might take a moment
-depending on the speed of your internet connection. Durint the
+depending on the speed of your internet connection. During the
 installation process you will be asked several questions. Instead of
-`your_username` the username you have chosen before will be displayed.
+`your_username` the username you have chosen before during the
+installation of Ububntu will be displayed.
 
 ```
 $ bash Anaconda3-5.0.1-Linux-x86_64.sh
@@ -67,15 +68,16 @@ Please, press ENTER to continue
 >>>
 ```
 
-**Press ENTER** as indicated and then **press space key** to read the
-license terms until you see the following:
+**Press ENTER** as requested and then **press the space key** to read
+the license terms until you see the following:
 
 ```
 Do you accept the license terms? [yes|no]
 [no] >>>
 ```
 
-**Type yes** and **press ENTER**
+**Type yes** and **press ENTER**. You will be asked for the location
+of the installation.
 
 ```
 Anaconda3 will now be installed into this location:
@@ -88,7 +90,8 @@ Anaconda3 will now be installed into this location:
 [/home/your_username/anaconda3] >>>
 ```
 
-**Press ENTER**. You should observe that now serveral packages are installed:
+**Press ENTER**. You should observe that now serveral packages are
+installed:
 
 ``` 
 PREFIX=/home/your_username/anaconda3
@@ -112,13 +115,13 @@ to PATH in your /home/your_username/.bashrc ? [yes|no]
 
 **Type yes** and **press ENTER**
 
-
 You will have now in your home directory a folder called
 ´anaconda3´. Do not removed it!
 
-We have changed the configuration of you shell and need to restart
-it. For this close the terminal and open a new one. You should now be
-able to call the command ´conda´. E.g. with the parameter `--version`
+You have changed the configuration of your shell (`.bashrc`) and due
+to this you need to restart it. For this close the terminal and open a
+new one. You should now be able to call the command `conda`. E.g. with
+the parameter `--version`
 
 ```
 $ conda --version
@@ -127,7 +130,7 @@ $ conda --version
 You should get version as output:
 
 ```
-conda 4.3.29
+conda 4.3.30
 ```
 
 If you get the error
