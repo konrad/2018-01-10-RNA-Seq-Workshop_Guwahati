@@ -18,7 +18,7 @@ set_variables(){
     GENOME_AND_ANNOTATION_FOLDER=${ROOT_FOLDER}/genome_and_annotations
     RNASEQ_FOLDER=${ROOT_FOLDER}/reads
     RNASEQ_SUBSAMPLED_1M_FOLDER=${ROOT_FOLDER}/reads_subsample_1M
-    RNASEQ_SUBSAMPLED_100K_FOLDER=${ROOT_FOLDER}/reads_subsample_100k
+    RNASEQ_SUBSAMPLED_100k_FOLDER=${ROOT_FOLDER}/reads_subsample_100k
     GENOME_SOURCE=ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/
     SRA_IDS_AND_LIB_NAMES="
 SRR5912852=wildtype_Rep_1
@@ -40,7 +40,7 @@ create_folders(){
 	${ROOT_FOLDER} \
 	${GENOME_AND_ANNOTATION_FOLDER} \
 	${RNASEQ_FOLDER} \
-	${RNASEQ_SUBSAMPLED_100K_FOLDER} \
+	${RNASEQ_SUBSAMPLED_100k_FOLDER} \
 	${RNASEQ_SUBSAMPLED_1M_FOLDER}
 }
 
@@ -71,16 +71,15 @@ download_reads(){
 subsample_reads(){
     for FASTQ_FILE in $(ls ${RNASEQ_FOLDER})
     do
-	bzcat ${RNASEQ_FOLDER}/${FASTQ_FILE} \
-	      | head -n 4000000 \
-	      | bzip2 --stdout - \
-	      > ${RNASEQ_SUBSAMPLED_1M_FOLDER}/$(echo ${FASTQ_FILE} | sed "s/.fastq/_1M.fastq/") &
+	# bzcat ${RNASEQ_FOLDER}/${FASTQ_FILE} \
+	#       | head -n 4000000 \
+	#       | bzip2 --stdout - \
+	#       > ${RNASEQ_SUBSAMPLED_1M_FOLDER}/$(echo ${FASTQ_FILE} | sed "s/.fastq/_1M.fastq/") &
 
 	bzcat ${RNASEQ_FOLDER}/${FASTQ_FILE} \
 	      | head -n 400000 \
 	      | bzip2 --stdout - \
 	      > ${RNASEQ_SUBSAMPLED_100k_FOLDER}/$(echo ${FASTQ_FILE} | sed "s/.fastq/_100k.fastq/") &
-	
     done
     wait
 }
