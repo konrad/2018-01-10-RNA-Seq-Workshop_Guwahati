@@ -145,6 +145,14 @@ $  echo 'export PATH="/home/'$USER'/anaconda3/bin:$PATH"' >> ~/.bashrc
 
 and open a new terminal after that. There run `conda --version ` again.
 
+In the worst case remove the `anaconda3` folder 
+
+```
+rm -rf ~/anaconda3
+```
+
+and start the installation again.
+
 ### Anaconda packages
 
 ```
