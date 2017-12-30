@@ -118,7 +118,7 @@ You will have now in your home directory a folder called
 
 We have changed the configuration of you shell and need to restart
 it. For this close the terminal and open a new one. You should now be
-able to call the command ´conda´. E.g. with the parameter `--verstion`
+able to call the command ´conda´. E.g. with the parameter `--version`
 
 ```
 $ conda --version
