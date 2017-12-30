@@ -71,10 +71,10 @@ download_reads(){
 subsample_reads(){
     for FASTQ_FILE in $(ls ${RNASEQ_FOLDER})
     do
-	# bzcat ${RNASEQ_FOLDER}/${FASTQ_FILE} \
-	#       | head -n 4000000 \
-	#       | bzip2 --stdout - \
-	#       > ${RNASEQ_SUBSAMPLED_1M_FOLDER}/$(echo ${FASTQ_FILE} | sed "s/.fastq/_1M.fastq/") &
+	bzcat ${RNASEQ_FOLDER}/${FASTQ_FILE} \
+	      | head -n 4000000 \
+	      | bzip2 --stdout - \
+	      > ${RNASEQ_SUBSAMPLED_1M_FOLDER}/$(echo ${FASTQ_FILE} | sed "s/.fastq/_1M.fastq/") &
 
 	bzcat ${RNASEQ_FOLDER}/${FASTQ_FILE} \
 	      | head -n 400000 \
@@ -83,10 +83,5 @@ subsample_reads(){
     done
     wait
 }
-
-make_unwritetable(){
-        chmod -R ugo-w ${ROOT_FOLDER}
-}
-
 
 main
