@@ -114,15 +114,16 @@ Do you wish the installer to prepend the Anaconda3 install location
 to PATH in your /home/your_username/.bashrc ? [yes|no]
 ```
 
-**Type yes** and **press ENTER**
+**Type yes** and **press ENTER**.
 
-You will have now in your home directory a folder called
-´anaconda3´. Do not removed it!
+You will have now a folder called ´anaconda3´ in your home
+directory. Do not removed it as it contains you Anaconda installation.
 
-You have changed the configuration of your shell (`.bashrc`) and due
-to this you need to restart it. For this close the terminal and open a
-new one. You should now be able to call the command `conda`. E.g. with
-the parameter `--version`
+During the installation process you have changed the configuration of
+your shell (the file `.bashrc`) and due to this you need to restart
+the terminal. For this close the terminal application and open a new
+instance by clicking on the terminal icon. You should now be able to
+call the command `conda`. E.g. with the parameter `--version`
 
 ```
 $ conda --version
