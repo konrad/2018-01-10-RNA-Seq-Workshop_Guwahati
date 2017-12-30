@@ -41,7 +41,7 @@ will learn how to use the Unix shell properly.
 We will use [Anaconda](https://www.anaconda.com) to install further
 tools. 
 
-In the code blocks below the dollar sign (´$´) indicate the command
+In the code blocks below the dollar sign (`$`) indicate the command
 line and must not be copied. Only copy and paste the text after it
 into the terminal.
 
@@ -101,7 +101,7 @@ installing: libgcc-ng-7.2.0-h7cc24e2_2 ...
 [...]
 ``` 
 
-After that you will be aske the following:
+After that you will be asked the following:
  
 ```
 [...]
@@ -136,12 +136,14 @@ If you get the error
 conda: command not found
 ```
 
-The installation failed. Try copy and run the following command in the
-terminal:
+something went wrong. Try copy and run the following command in the
+terminal 
 
 ```
 $  echo 'export PATH="/home/'$USER'/anaconda3/bin:$PATH"' >> ~/.bashrc
 ```
+
+and open a new terminal after that. There run `conda --version ` again.
 
 ### Anaconda packages
 
