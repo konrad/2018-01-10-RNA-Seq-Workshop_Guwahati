@@ -140,7 +140,7 @@ The installation failed. Try copy and run the following command in the
 terminal:
 
 ```
-$  echo 'export PATH="/home/$USER/anaconda3/bin:$PATH"' >> ~/.bashrc
+$  echo 'export PATH="/home/'$USER'/anaconda3/bin:$PATH"' >> ~/.bashrc
 ```
 
 ### Anaconda packages
