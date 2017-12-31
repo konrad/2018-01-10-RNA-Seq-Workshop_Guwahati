@@ -189,3 +189,32 @@ Proceed ([y]/n)?
 ```
 $ pip install reademption
 ```
+
+### Install Integrated Genome Browser (IGB)
+
+Open a terminal, write
+
+```
+$ wget http://bioviz.org/igb/releases/current/IGB_unix_current.sh
+```
+
+and **press ENTER**.
+
+Then write 
+
+```
+$ bash IGB_unix_current.sh
+```
+
+and **press ENTER**. Then follow the instruction of the graphical
+installer.
+
+### Install Integrative Genomics Viewer 
+
+```
+$ wget http://data.broadinstitute.org/igv/projects/downloads/2.4/IGV_2.4.5.zip
+```
+
+```
+$ zip IGV_2.4.5.zip
+```
