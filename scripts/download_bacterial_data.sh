@@ -1,16 +1,16 @@
 #!/bin/bash
 
-#
+# Used data RNA-Seq data set:
 # https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE102385
 # 
 
 main(){
     set_variables
     create_folders
-    # download_genome_and_annotations
-    # download_reads
+    download_genome_and_annotations
+    download_reads
     subsample_reads
-    # make_unwritetable
+    tar_folder
 }
 
 set_variables(){
@@ -32,7 +32,6 @@ SRR5912859=csrA_Rep_3
 SRR5912860=csrA_Rep_4
 SRR5912861=csrA_Rep_5
 "
-    
 }
 
 create_folders(){
@@ -82,6 +81,10 @@ subsample_reads(){
 	      > ${RNASEQ_SUBSAMPLED_100k_FOLDER}/$(echo ${FASTQ_FILE} | sed "s/.fastq/_100k.fastq/") &
     done
     wait
+}
+
+tar_folder(){
+    tar cf ${ROOT_FOLDER}.tar ${ROOT_FOLDER}
 }
 
 main
