@@ -10,7 +10,7 @@ operating system that is currently installed on you laptop
 
 - x64 processor
 - 8 Gb RAM
-- 40 Gb disk space
+- 100 Gb disk space
 
 ### Install Ubuntu
 
@@ -193,7 +193,7 @@ Please test if the tool are install by typing the following command in
 the terminal and press ENTER.
 
 ```
-$ fastqc -c
+$ fastqc -v
 ```
 
 ```
@@ -205,7 +205,7 @@ $ fastq_quality_trimmer
 ```
 
 ```
-$ segemehl
+$ segemehl.x
 ```
 
 ```
