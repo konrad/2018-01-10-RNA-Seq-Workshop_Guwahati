@@ -225,6 +225,10 @@ $ kallisto version
 ```
 
 ```
+$ cutadapt --version
+```
+
+```
 $ R --version
 ```
 
