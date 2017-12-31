@@ -1,4 +1,4 @@
-# Reading recommendations
+## Reading recommendations
 
 - Reuter JA, Spacek DV, Snyder MP. High-throughput sequencing
   technologies. Mol Cell. 2015 May
