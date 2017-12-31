@@ -1,7 +1,10 @@
 ## Installation instructions
 
 In order to participate in the workshop you have to install Ubuntu
-GNU/Linux as well as Anaconda and several tools.
+GNU/Linux as well as Anaconda and several tools. Ubuntu is an
+operating system that has to be installed intead or in parallel to the
+operating system that is currently installed on you laptop
+(e.g. Windows). 
 
 ### Hardware requirements
 
@@ -165,12 +168,14 @@ rm -rf ~/anaconda3
 
 and start the installation again.
 
-### Install some tool as Anaconda packages
+### Install some tools as Anaconda packages
 
 Now we need to install some tools. Open a terminal and enter
 
 ```
-$ conda install -c bioconda bwa fastx_toolkit fastqc segemehl sra-tools star samtools kallisto bioconductor-deseq2
+$ conda install -c bioconda bwa fastx_toolkit fastqc segemehl \
+                   sra-tools star samtools kallisto bioconductor-deseq2 \
+				   cutadapt bedtools
 ```
 
 **Press Enter**
@@ -184,13 +189,70 @@ Proceed ([y]/n)?
 
 **Type y** and **press Enter**.
 
+Please test if the tool are install by typing the following command in
+the terminal and press ENTER.
+
+```
+$ fastqc -c
+```
+
+```
+$ bwa
+```
+
+```
+$ fastq_quality_trimmer
+```
+
+```
+$ segemehl
+```
+
+```
+$ STAR --version
+```
+
+```
+$ samtools --version
+```
+
+```
+$ bedtools --version
+```
+
+```
+$ kallisto version
+```
+
+```
+$ R --version
+```
+
 ### Install READemption
+
+In order to
+install [READemption](https://pythonhosted.org/READemption/) open a
+terminal, write 
 
 ```
 $ pip install reademption
 ```
 
+and **press ENTER**.
+
+You can test READemption by opening a new terminal, typing
+
+```
+$ reademption -v
+```
+
+and **pressing ENTER**.
+
+
 ### Install Integrated Genome Browser (IGB)
+
+To visually insprect genomes and mapped we will use the [Integrated
+Genome Browser](http://bioviz.org/igb/).
 
 Open a terminal, write
 
@@ -218,6 +280,10 @@ $ bash ~/IGB/IntegratedGenomeBrowser
 and **press ENTER**.
 
 ### Install Integrative Genomics Viewer 
+
+We will also use the alternative genome
+browser
+[Integrative Genomics Viewer](http://software.broadinstitute.org/software/igv/).
 
 Open a terminal, write
 
