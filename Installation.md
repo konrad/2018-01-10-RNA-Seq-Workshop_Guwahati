@@ -165,12 +165,12 @@ rm -rf ~/anaconda3
 
 and start the installation again.
 
-### Anaconda packages
+### Install some tool as Anaconda packages
 
 Now we need to install some tools. Open a terminal and enter
 
 ```
-$ conda install -c bioconda bwa fastx_toolkit fastqc segemehl sra-tools star samtools kallisto
+$ conda install -c bioconda bwa fastx_toolkit fastqc segemehl sra-tools star samtools kallisto bioconductor-deseq2
 ```
 
 **Press Enter**
