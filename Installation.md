@@ -10,7 +10,7 @@ operating system that is currently installed on you laptop
 
 - x64 processor
 - 8 Gb RAM
-- 40 Gb disk space
+- 100 Gb disk space
 
 ### Install Ubuntu
 
