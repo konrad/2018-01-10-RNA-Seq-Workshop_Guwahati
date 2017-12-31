@@ -1,7 +1,10 @@
 ## Installation instructions
 
 In order to participate in the workshop you have to install Ubuntu
-GNU/Linux as well as Anaconda and serveral tools.
+GNU/Linux as well as Anaconda and several tools. Ubuntu is an
+operating system that has to be installed intead or in parallel to the
+operating system that is currently installed on you laptop
+(e.g. Windows). 
 
 ### Hardware requirements
 
@@ -22,7 +25,7 @@ Tutorials:
   installation](https://help.ubuntu.com/community/WindowsDualBoot) in
   case you want Windows and Ubuntu installed on the same machine
 
-After the installation and the first log-in you migh be asked to
+After the installation and the first log-in you might be asked to
 update the system. Please do so. As we will need the terminal
 application quite often we will add it to our favorite
 applications. For this click on the button icon with the nine dots
@@ -30,14 +33,14 @@ applications. For this click on the button icon with the nine dots
 to search ...") "Terminal". An icon name "Terminal" will be
 shown. Click on that icon. The terminal icon will be now shown in the
 bar on the left side. Click with the right mouse button on it and
-click on "Add to Favorites" in menue that pops up. This will keep the
+click on "Add to Favorites" in menu that pops up. This will keep the
 terminal icon in the bar to make it faster accessible.
 
 In the following you will use the Unix Shell for the installation of
 further tools. Please follow it precisely. During the workshop you
 will learn how to use the Unix shell properly.
 
-### Anaconda
+### Install Anaconda
 
 We will use [Anaconda](https://www.anaconda.com) to install further
 tools. 
@@ -58,7 +61,7 @@ Now you need to run the installer script in the terminal - this might
 take a moment depending on the speed of your internet
 connection. During the installation process you will be asked several
 questions. Instead of `your_username` the username you have chosen
-before during the installation of Ububntu will be displayed. Write 
+before during the installation of Ubuntu will be displayed. Write 
 
 ```
 $ bash Anaconda3-5.0.1-Linux-x86_64.sh
@@ -98,7 +101,7 @@ Anaconda3 will now be installed into this location:
 [/home/your_username/anaconda3] >>>
 ```
 
-**Press ENTER**. You should observe that now serveral packages are
+**Press ENTER**. You should observe that now several packages are
 installed:
 
 ``` 
@@ -165,12 +168,14 @@ rm -rf ~/anaconda3
 
 and start the installation again.
 
-### Anaconda packages
+### Install some tools as Anaconda packages
 
 Now we need to install some tools. Open a terminal and enter
 
 ```
-$ conda install -c bioconda bwa fastx_toolkit fastqc segemehl sra-tools star samtools kallisto
+$ conda install -c bioconda bwa fastx_toolkit fastqc segemehl \
+                   sra-tools star samtools kallisto bioconductor-deseq2 \
+				   cutadapt bedtools
 ```
 
 **Press Enter**
@@ -182,4 +187,128 @@ and downgraded.
 Proceed ([y]/n)?
 ```
 
-**Type y** and **press Enter**
+**Type y** and **press Enter**.
+
+Please test if the tool are install by typing the following command in
+the terminal and press ENTER.
+
+```
+$ fastqc -c
+```
+
+```
+$ bwa
+```
+
+```
+$ fastq_quality_trimmer
+```
+
+```
+$ segemehl
+```
+
+```
+$ STAR --version
+```
+
+```
+$ samtools --version
+```
+
+```
+$ bedtools --version
+```
+
+```
+$ kallisto version
+```
+
+```
+$ cutadapt --version
+```
+
+```
+$ R --version
+```
+
+### Install READemption
+
+In order to
+install [READemption](https://pythonhosted.org/READemption/) open a
+terminal, write 
+
+```
+$ pip install reademption
+```
+
+and **press ENTER**.
+
+You can test READemption by opening a new terminal, typing
+
+```
+$ reademption -v
+```
+
+and **pressing ENTER**.
+
+
+### Install Integrated Genome Browser (IGB)
+
+To visually insprect genomes and mapped we will use the [Integrated
+Genome Browser](http://bioviz.org/igb/).
+
+Open a terminal, write
+
+```
+$ wget http://bioviz.org/igb/releases/current/IGB_unix_current.sh
+```
+
+and **press ENTER**.
+
+Then write 
+
+```
+$ bash IGB_unix_current.sh
+```
+
+and **press ENTER**. Then follow the instruction of the graphical
+installer. After that you should have an IGV icon on you desktop. The
+folder `IGV` in your home directory contains the software and must not
+be deleted! You run IGB by clicking on the icon. Alternatively type
+
+```
+$ bash ~/IGB/IntegratedGenomeBrowser
+```
+
+and **press ENTER**.
+
+### Install Integrative Genomics Viewer 
+
+We will also use the alternative genome
+browser
+[Integrative Genomics Viewer](http://software.broadinstitute.org/software/igv/).
+
+Open a terminal, write
+
+```
+$ wget http://data.broadinstitute.org/igv/projects/downloads/2.4/IGV_2.4.5.zip
+```
+
+and **press ENTER**.
+
+Then write 
+
+```
+$ unzip IGV_2.4.5.zip
+```
+
+and **press ENTER**.
+
+To run it type
+
+```
+$ bash ~/IGV_2.4.5/igv.sh
+```
+
+and **press ENTER**.
