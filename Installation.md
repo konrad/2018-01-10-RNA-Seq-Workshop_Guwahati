@@ -207,14 +207,38 @@ $ bash IGB_unix_current.sh
 ```
 
 and **press ENTER**. Then follow the instruction of the graphical
-installer.
+installer. After that you should have an IGV icon on you desktop. The
+folder `IGV` in your home directory contains the software and must not
+be deleted! You run IGB by clicking on the icon. Alternatively type
+
+```
+$ bash ~/IGB/IntegratedGenomeBrowser
+```
+
+and **press ENTER**.
 
 ### Install Integrative Genomics Viewer 
+
+Open a terminal, write
 
 ```
 $ wget http://data.broadinstitute.org/igv/projects/downloads/2.4/IGV_2.4.5.zip
 ```
 
+and **press ENTER**.
+
+Then write 
+
 ```
-$ zip IGV_2.4.5.zip
+$ unzip IGV_2.4.5.zip
 ```
+
+and **press ENTER**.
+
+To run it type
+
+```
+$ bash ~/IGV_2.4.5/igv.sh
+```
+
+and **press ENTER**.
