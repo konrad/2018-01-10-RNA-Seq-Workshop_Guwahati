@@ -1,7 +1,7 @@
 ## Installation instructions
 
 In order to participate in the workshop you have to install Ubuntu
-GNU/Linux as well as Anaconda and serveral tools.
+GNU/Linux as well as Anaconda and several tools.
 
 ### Hardware requirements
 
@@ -22,7 +22,7 @@ Tutorials:
   installation](https://help.ubuntu.com/community/WindowsDualBoot) in
   case you want Windows and Ubuntu installed on the same machine
 
-After the installation and the first log-in you migh be asked to
+After the installation and the first log-in you might be asked to
 update the system. Please do so. As we will need the terminal
 application quite often we will add it to our favorite
 applications. For this click on the button icon with the nine dots
@@ -30,14 +30,14 @@ applications. For this click on the button icon with the nine dots
 to search ...") "Terminal". An icon name "Terminal" will be
 shown. Click on that icon. The terminal icon will be now shown in the
 bar on the left side. Click with the right mouse button on it and
-click on "Add to Favorites" in menue that pops up. This will keep the
+click on "Add to Favorites" in menu that pops up. This will keep the
 terminal icon in the bar to make it faster accessible.
 
 In the following you will use the Unix Shell for the installation of
 further tools. Please follow it precisely. During the workshop you
 will learn how to use the Unix shell properly.
 
-### Anaconda
+### Install Anaconda
 
 We will use [Anaconda](https://www.anaconda.com) to install further
 tools. 
@@ -58,7 +58,7 @@ Now you need to run the installer script in the terminal - this might
 take a moment depending on the speed of your internet
 connection. During the installation process you will be asked several
 questions. Instead of `your_username` the username you have chosen
-before during the installation of Ububntu will be displayed. Write 
+before during the installation of Ubuntu will be displayed. Write 
 
 ```
 $ bash Anaconda3-5.0.1-Linux-x86_64.sh
@@ -98,7 +98,7 @@ Anaconda3 will now be installed into this location:
 [/home/your_username/anaconda3] >>>
 ```
 
-**Press ENTER**. You should observe that now serveral packages are
+**Press ENTER**. You should observe that now several packages are
 installed:
 
 ``` 
@@ -182,4 +182,10 @@ and downgraded.
 Proceed ([y]/n)?
 ```
 
-**Type y** and **press Enter**
+**Type y** and **press Enter**.
+
+### Install READemption
+
+```
+$ pip install reademption
+```
