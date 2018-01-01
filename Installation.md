@@ -245,6 +245,10 @@ $ cutadapt --version
 ```
 
 ```
+$ htseq-count
+```
+
+```
 $ R --version
 ```
 
