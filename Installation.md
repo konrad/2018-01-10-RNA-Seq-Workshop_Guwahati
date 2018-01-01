@@ -179,14 +179,14 @@ In the worst case remove the `anaconda3` folder
 rm -rf ~/anaconda3
 ```
 
-and start the installation again.
+and start the Anaconda installation again.
 
 ### Install some tools as Anaconda packages
 
 Now we need to install some tools. Open a terminal and enter
-(important: leave *NO SPACE* after the `\`. you can alternatively also
-type the text witouth the `\`s - they were just added here to keep the
-line length short)
+(important: leave **NO SPACE** in the line after the `\`. You can
+alternatively also type the text witouth the `\` - they were just
+added here to keep the line length short)
 
 ```
 $ conda install -c bioconda bwa fastx_toolkit fastqc segemehl \
