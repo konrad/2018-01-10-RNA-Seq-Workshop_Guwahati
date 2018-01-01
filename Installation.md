@@ -191,7 +191,7 @@ added here to keep the line length short)
 ```
 $ conda install -c bioconda bwa fastx_toolkit fastqc segemehl \
         sra-tools star samtools kallisto bioconductor-deseq2 \
-	cutadapt bedtools
+	cutadapt bedtools htseq
 ```
 
 **Press Enter**
