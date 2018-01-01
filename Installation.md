@@ -2,9 +2,9 @@
 
 In order to participate in the workshop you have to install Ubuntu
 GNU/Linux as well as Anaconda and several tools. Ubuntu is an
-operating system that has to be installed intead or in parallel to the
-operating system that is currently installed on you laptop
-(e.g. Windows). 
+operating system that has to be installed instead or in parallel to
+the operating system that is currently installed on you laptop
+(e.g. Windows).
 
 ### Hardware requirements
 
@@ -14,12 +14,17 @@ operating system that is currently installed on you laptop
 
 ### Install Ubuntu
 
-Please install the desktop version of the GNU/Linux
-distribution [Ubuntu](https://www.ubuntu.com) 16.10 or 17.10. For this
-visit the [download page](https://www.ubuntu.com/download/desktop).
+Please install the desktop version of the GNU/Linux distribution
+[Ubuntu](https://www.ubuntu.com) 16.04 LTS or 17.10. For this visit
+the [download page](https://www.ubuntu.com/download/desktop). The
+download of Ubuntu 17.10 is currently discouraged due to an issue on
+certain Lenovo laptops as the website stated. If you do not have a
+Lenovo laptop you can download the iso file
+ubuntu-17.10-desktop-amd64.iso from
+[here](http://releases.ubuntu.com/17.10/ubuntu-17.10-desktop-amd64.iso).
 
 Tutorials:
-- [Tutorial](https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop)
+- [Install Ubuntu desktop](https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop)
 - [Further installation guides](https://help.ubuntu.com/community/Installation)
 - [Instruction for a dual boot
   installation](https://help.ubuntu.com/community/WindowsDualBoot) in
@@ -27,18 +32,26 @@ Tutorials:
 
 After the installation and the first log-in you might be asked to
 update the system. Please do so. As we will need the terminal
-application quite often we will add it to our favorite
-applications. For this click on the button icon with the nine dots
-("Show Applications") and type in the search field on the top ("Type
-to search ...") "Terminal". An icon name "Terminal" will be
-shown. Click on that icon. The terminal icon will be now shown in the
-bar on the left side. Click with the right mouse button on it and
-click on "Add to Favorites" in menu that pops up. This will keep the
-terminal icon in the bar to make it faster accessible.
+application quite often we will add it to our favorite applications:
+If you have installed *Ubuntu 16.04 LTS* click on the button with the
+big cirlce on the upper left corner and type in the search field on
+the top "Terminal". An icon name "Terminal" will be shown. Click on
+that icon. The terminal icon will be now shown in the bar on the left
+side. Click with the right mouse button on it and click on "Lock to
+Launcher" in menu that pops up. This will keep the terminal icon in
+the bar to make it faster accessible. If you have installed *Ubuntu
+17.10* click on the button icon with the nine dots ("Show
+Applications") and type in the search field on the top ("Type to
+search ...") "Terminal". An icon name "Terminal" will be shown. Click
+on that icon. The terminal icon will be now shown in the bar on the
+left side. Click with the right mouse button on it and click on "Add
+to Favorites" in menu that pops up. This will keep the terminal icon
+in the bar to make it faster accessible.
 
-In the following you will use the Unix Shell for the installation of
-further tools. Please follow it precisely. During the workshop you
-will learn how to use the Unix shell properly.
+In the following you will use the Unix shell for the installation of
+further tools. Please follow the instructions precisely (white spaces
+are important!). During the workshop you will learn how to use the
+Unix shell properly.
 
 ### Install Anaconda
 
@@ -46,8 +59,8 @@ We will use [Anaconda](https://www.anaconda.com) to install further
 tools. 
 
 In the code blocks below the dollar sign (`$`) indicates the command
-line and must not be copied. Only copy and paste the text after it
-into the terminal.
+line promt and must not be copied. Only copy and paste the text after
+it into the terminal.
 
 Open a terminal and write
 
