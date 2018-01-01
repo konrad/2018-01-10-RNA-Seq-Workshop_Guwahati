@@ -184,11 +184,14 @@ and start the installation again.
 ### Install some tools as Anaconda packages
 
 Now we need to install some tools. Open a terminal and enter
+(important: leave *NO SPACE* after the `\`. you can alternatively also
+type the text witouth the `\`s - they were just added here to keep the
+line length short)
 
 ```
 $ conda install -c bioconda bwa fastx_toolkit fastqc segemehl \
-                   sra-tools star samtools kallisto bioconductor-deseq2 \
-				   cutadapt bedtools
+        sra-tools star samtools kallisto bioconductor-deseq2 \
+	cutadapt bedtools
 ```
 
 **Press Enter**
