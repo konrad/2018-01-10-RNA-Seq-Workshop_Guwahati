@@ -5,7 +5,6 @@ main(){
     create_folder
     copy_genome_files
     subsample_fastq_file
-    subsample_wiggle_file
     subsample_bam_file_to_sam_file
     tar_folder
 }
@@ -18,6 +17,8 @@ copy_genome_files(){
     cp \
 	 ${READEMPTION_FOLDER}/input/annotations/GCF_000005845.2_ASM584v2_genomic.gff \
 	 ${READEMPTION_FOLDER}/input/reference_sequences/GCF_000005845.2_ASM584v2_genomic.fa \
+	 ${READEMPTION_FOLDER}/output/coverage/coverage-raw/csrA_Rep_1_forward.wig \
+	 ${READEMPTION_FOLDER}/output/coverage/coverage-raw/csrA_Rep_1_reverse.wig \
 	 ${EXAMPLE_FILE_FOLDER}
 }
 
@@ -27,15 +28,12 @@ subsample_fastq_file(){
 	> ${EXAMPLE_FILE_FOLDER}/csrA_Rep_1.fastq
 }
 
-subsample_wiggle_file(){
-    head -n 10000 ${READEMPTION_FOLDER}/output/coverage/coverage-raw/csrA_Rep_1_forward.wig \
-	 > ${EXAMPLE_FILE_FOLDER}/csrA_Rep_1_forward.wig
-}
-
 subsample_bam_file_to_sam_file(){
     samtools view -h ${READEMPTION_FOLDER}/output/align/alignments/csrA_Rep_1_alignments_final.bam \
-	| head -n 10000 \
-	> ${EXAMPLE_FILE_FOLDER}/csrA_Rep_1_alignments.sam
+	| head -n 100000 \
+        > ${EXAMPLE_FILE_FOLDER}/csrA_Rep_1_alignments.sam
+    samtools view -Shb ${EXAMPLE_FILE_FOLDER}/csrA_Rep_1_alignments.sam \
+	     > ${EXAMPLE_FILE_FOLDER}/csrA_Rep_1_alignments.bam
 }
 
 tar_folder(){
