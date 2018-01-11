@@ -51,6 +51,7 @@ run_read_alignment(){
         --process ${MAPPING_PROCESSES} \
         --segemehl_accuracy 95 \
         --min_read_length 20 \
+        --min_phred_score 20 \
 	--progress \
 	--fastq \
 	--adapter CTGTAGGCAC \
