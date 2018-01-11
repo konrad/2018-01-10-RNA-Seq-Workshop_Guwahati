@@ -48,9 +48,9 @@ link_libraries(){
 run_read_alignment(){
     reademption \
         align \
-        -p ${MAPPING_PROCESSES} \
-        -a 95 \
-        -l 20 \
+        --process ${MAPPING_PROCESSES} \
+        --segemehl_accuracy 95 \
+        --min_read_length 20 \
 	--progress \
 	--fastq \
 	--adapter CTGTAGGCAC \
