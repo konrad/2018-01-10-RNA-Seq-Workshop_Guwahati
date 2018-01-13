@@ -8,11 +8,11 @@ take place in Guwahati, India, from the 10th to the 13th January,
 
 The workshop intends to teach the following skills:
 
-- Basic Unis shell skills and the ability to write simple shell
+- Basic Unix shell skills and the ability to write simple shell
   scripts
 - Understanding of different high-throughput sequencing (HTS)
   technologies
 - Understanding of different computational tools and file
   types that are commonly used in the analysis of HTS data.
 - Understanding of the general workflow required to analyze RNA-Seq
-  data of bacterial and eukarytic species.
+  data of bacterial and eukaryotic species.
