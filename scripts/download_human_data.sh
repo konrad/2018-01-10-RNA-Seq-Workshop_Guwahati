@@ -12,10 +12,10 @@ main(){
     set_variables
     create_folders
     download_genome_and_annotations
-    download_reads
+    #download_reads
     subsample_reads
     extract_separeted_chromosome_data
-    tar_folder
+    #tar_folder
 }
 
 set_variables(){
@@ -51,7 +51,8 @@ download_genome_and_annotations(){
     wget -cP ${GENOME_AND_ANNOTATION_FOLDER} \
 	 ${GENOME_SOURCE}/GRCh38.p10.genome.fa.gz \
 	 ${GENOME_SOURCE}/gencode.v27.basic.annotation.gff3.gz \
-	 ${GENOME_SOURCE}/gencode.v27.pc_transcripts.fa.gz
+	 ${GENOME_SOURCE}/gencode.v27.pc_transcripts.fa.gz \
+     ${GENOME_SOURCE}/gencode.v27.annotation.gtf.gz
     gunzip ${GENOME_AND_ANNOTATION_FOLDER}/*gz
 }
 
