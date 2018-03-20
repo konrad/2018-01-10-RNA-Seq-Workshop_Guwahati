@@ -111,7 +111,7 @@ count_reads_per_feature(){
     cut -f -9 $READ_PER_FEATURE_FOLDER/Benta_Rep_4_.Aligned.sortedByCoord.out.bam.csv >> tmp_combined 
     for FILE in $(ls $READ_PER_FEATURE_FOLDER)
     do
-        CLEANED_NAME=$(echo $FILE | sed "s/.Aligned.sortedByCoord.out.bam.csv//")
+        CLEANED_NAME=$(echo $FILE | sed "s/_.Aligned.sortedByCoord.out.bam.csv//")
         echo $READ_PER_FEATURE_FOLDER/$FILE
         echo $CLEANED_NAME > tmp
         cut -f 10 $READ_PER_FEATURE_FOLDER/$FILE >> tmp
