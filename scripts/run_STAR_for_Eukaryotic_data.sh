@@ -11,9 +11,9 @@ main(){
     GENOME_FASTA=${PWD}/Human_data/genome_and_annotations/GRCh38.p10.genome.fa
     ANNOTATION_GTF=${PWD}/Human_data/genome_and_annotations/gencode.v27.annotation.gtf
     ANNOTATION_GFF=${PWD}/Human_data/genome_and_annotations/gencode.v27.basic.annotation.gff3
-    #READ_SOURCE_FOLDER=${PWD}/Human_data/reads/
+    READ_SOURCE_FOLDER=${PWD}/Human_data/reads/
     #READ_SOURCE_FOLDER=${PWD}/Human_data/reads_subsample_1M/    
-    READ_SOURCE_FOLDER=${PWD}/Human_data/reads_subsample_100k/
+    #READ_SOURCE_FOLDER=${PWD}/Human_data/reads_subsample_100k/
 
     #create_folders
     #link_and_rename_read_files
@@ -54,15 +54,18 @@ create_index(){
 }
 
 run_read_alignment(){
-    for LIB in $(ls $READ_FOLDER)
+    for R1_LIB in $(ls $READ_FOLDER/*R1*.fastq.gz)
     do
-    OUTPUT_FILE_PREFIX=$(echo $LIB | sed -e "s/.fastq.gz/./")
-    echo $LIB
-    $STAR_BIN \
+    OUTPUT_FILE_PREFIX=$(echo $R1_LIB | sed -e "s/R1.fastq.gz/./")
+    OUTPUT_FILE_PREFIX=$(basename $OUTPUT_FILE_PREFIX)
+    echo $R1_LIB
+    R2_LIB=$(echo $R1_LIB | sed "s/_R1\.fastq/_R2\.fastq/")
+    echo $R2_LIB
+            $STAR_BIN \
             --runMode alignReads \
             --runThreadN 40 \
             --genomeDir $GENOME_INDEX_DIR \
-            --readFilesIn $READ_FOLDER/$LIB \
+            --readFilesIn $READ_FOLDER/$(basename $R1_LIB) $READ_FOLDER/$(basename $R2_LIB) \
             --readFilesCommand zcat \
             --sjdbGTFfile $ANNOTATION_GTF \
             --outFileNamePrefix $MAPPING_FOLDER/$OUTPUT_FILE_PREFIX \
@@ -80,14 +83,15 @@ index_bam_files(){
 
 compile_mapping_stats(){
     grep "Uniquely mapped reads %" ${MAPPING_FOLDER}/*Log.final.out \
-    | sed -e "s/output\/mappings\///" -e s/:.*\|// -e "s/.Log.final.out//"\
+    | sed -e "s/STAR_analysis\/mappings\///" -e s/:.*\|// -e "s/_.Log.final.out//"\
     > $OUTPUT_FOLDER/Percentage_uniquely_mapped_reads.csv
 }
 
 count_reads_per_feature(){
-    for LIB in $(ls $READ_FOLDER)
+    for LIB in $(ls $READ_FOLDER/*R1*.fastq.gz)
     do
-    OUTPUT_FILE_PREFIX=$(echo $LIB | sed -e "s/.fastq.gz//")
+    OUTPUT_FILE_PREFIX=$(echo $LIB | sed -e "s/_R1.fastq.gz//")
+    OUTPUT_FILE_PREFIX=$(basename $OUTPUT_FILE_PREFIX)
     echo ${OUTPUT_FILE_PREFIX}
     done
     grep -P "\tgene\t.*protein_coding|^#" ${ANNOTATION_GFF} \
@@ -103,10 +107,8 @@ count_reads_per_feature(){
                -b {} \
                ">" $READ_PER_FEATURE_FOLDER/{/}.csv
 
-    echo -e "Chr\tSource\tFeature\tStart\tEnd\tFrame\tStrand\t\tAttributes" \
-    > tmp_combined
-    cut -f -9 $READ_PER_FEATURE_FOLDER/${OUTPUT_FILE_PREFIX}.Aligned.sortedByCoord.out.bam.csv \
-    >> tmp_combined 
+    echo -e "Chr\tSource\tFeature\tStart\tEnd\tFrame\tStrand\t\tAttributes" > tmp_combined
+    cut -f -9 $READ_PER_FEATURE_FOLDER/Benta_Rep_4_.Aligned.sortedByCoord.out.bam.csv >> tmp_combined 
     for FILE in $(ls $READ_PER_FEATURE_FOLDER)
     do
         CLEANED_NAME=$(echo $FILE | sed "s/.Aligned.sortedByCoord.out.bam.csv//")
